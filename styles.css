@@ -2,40 +2,14 @@
 body {
     font-family: 'Poppins', sans-serif;
     line-height: 1.6;
-    background: linear-gradient(45deg, #f9f7f7, #f5f5f5);
-    background-size: 50px 50px; /* Tamaño del patrón */
-    animation: animarFondo 10s ease infinite;
+    background: #f5e6ca; /* Fondo masa */
     margin: 0;
     padding: 0;
     color: #333333;
     animation: fadeIn 1.5s ease-in-out;
 }
 
-/* Título principal */
-#titulo-principal {
-    font-size: 2.5em;
-    margin: 0;
-    color: black !important; /* Cambia el color del título a negro y asegura prioridad */
-    background: none !important; /* Elimina cualquier fondo degradado previo */
-    -webkit-background-clip: unset; /* Elimina el clip de fondo si está presente */
-    -webkit-text-fill-color: unset; /* Desactiva el texto transparente si estaba activo */
-}
-
-/* Otros títulos (h2) con degradado */
-h2 {
-    font-size: 1.8em;
-    background: linear-gradient(45deg, #f3722c, #f9844a);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-
 /* Animaciones */
-@keyframes animarFondo {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
-}
-
 @keyframes fadeIn {
     from {
         opacity: 0;
@@ -45,6 +19,21 @@ h2 {
         opacity: 1;
         transform: translateY(0);
     }
+}
+
+/* Título principal */
+#titulo-principal {
+    font-size: 2.5em;
+    margin: 0;
+    color: black !important; /* Asegura que el título sea negro */
+}
+
+/* Otros títulos (h2) con degradado */
+h2 {
+    font-size: 1.8em;
+    background: linear-gradient(45deg, #f3722c, #f9844a);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 /* Barra de progreso */
@@ -92,6 +81,16 @@ header {
     position: relative;
 }
 
+header .menu-idioma {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    cursor: pointer;
+}
+
 /* Contenedor flexible */
 .contenedor-flex {
     display: flex;
@@ -109,7 +108,6 @@ header {
     object-fit: cover;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transform: translateY(var(--scroll, 0px)); /* Efecto parallax */
     transition: transform 0.2s ease, box-shadow 0.3s ease;
 }
 
