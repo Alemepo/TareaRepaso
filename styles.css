@@ -1,0 +1,214 @@
+/* Configuración general */
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    background: linear-gradient(45deg, #f9f7f7, #f5f5f5);
+    background-size: 50px 50px; /* Tamaño del patrón */
+    animation: animarFondo 10s ease infinite;
+    margin: 0;
+    padding: 0;
+    color: #333333;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+/* Título principal */
+#titulo-principal {
+    font-size: 2.5em;
+    margin: 0;
+    color: black !important; /* Cambia el color del título a negro y asegura prioridad */
+    background: none !important; /* Elimina cualquier fondo degradado previo */
+    -webkit-background-clip: unset; /* Elimina el clip de fondo si está presente */
+    -webkit-text-fill-color: unset; /* Desactiva el texto transparente si estaba activo */
+}
+
+/* Otros títulos (h2) con degradado */
+h2 {
+    font-size: 1.8em;
+    background: linear-gradient(45deg, #f3722c, #f9844a);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Animaciones */
+@keyframes animarFondo {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Barra de progreso */
+#barra-progreso {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 5px;
+    background-color: #f3722c;
+    z-index: 1000;
+    transition: width 0.2s ease;
+}
+
+/* Botón flotante */
+.boton-flotante {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #f3722c;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    font-size: 20px;
+    text-align: center;
+    line-height: 50px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: none;
+}
+
+.boton-flotante:hover {
+    background-color: #d65a1e;
+}
+
+/* Encabezado */
+header {
+    background: linear-gradient(135deg, #f9c74f, #f9844a);
+    padding: 30px;
+    text-align: center;
+    color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+/* Contenedor flexible */
+.contenedor-flex {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 20px;
+    margin: 20px auto;
+    max-width: 1200px;
+}
+
+/* Decoración lateral */
+.decoracion-izquierda img, .decoracion-derecha img {
+    width: 200px;
+    height: auto;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transform: translateY(var(--scroll, 0px)); /* Efecto parallax */
+    transition: transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.decoracion-izquierda img:hover, .decoracion-derecha img:hover {
+    transform: scale(1.2) rotate(5deg); /* Zoom y rotación */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Contenido principal */
+.contenido-principal {
+    flex: 1;
+}
+
+.contenido-principal article {
+    margin-bottom: 20px;
+}
+
+/* Botón */
+.boton {
+    background-color: #f3722c;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+}
+
+.boton:hover {
+    background-color: #d65a1e;
+}
+
+/* Ventana emergente */
+.ventana-curiosidad {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    width: 80%;
+    max-width: 400px;
+    border: 3px solid #f3722c;
+    border-radius: 10px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    text-align: center;
+}
+
+/* Sección de curiosidades */
+.curiosidad-section {
+    text-align: center;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #fff9f0;
+    border: 2px solid #f3722c;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Botones compartir */
+.compartir-redes {
+    text-align: center;
+    margin: 20px auto;
+}
+
+.compartir-redes .boton {
+    margin: 5px;
+}
+
+/* Modal */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-contenido {
+    position: relative;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 600px;
+    width: 90%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.cerrar {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 1.5em;
+    cursor: pointer;
+}

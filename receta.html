@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Receta de Pizza Margherita</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="barra-progreso"></div>
+
+    <header>
+        <h1 id="titulo-principal" class="aparece">Receta de Pizza Margherita Casera</h1>
+        <select id="cambiar-idioma" class="menu-idioma">
+            <option value="es">Español</option>
+            <option value="en">English</option>
+            <option value="it">Italiano</option>
+        </select>
+    </header>
+
+    <section class="contenido">
+        <div class="contenedor-flex">
+            <div class="decoracion-izquierda">
+                <img src="pizzero.jpg" alt="Decoración izquierda">
+            </div>
+            <div class="contenido-principal">
+                <article>
+                    <h2 id="titulo-ingredientes">Ingredientes</h2>
+                    <p id="descripcion-ingredientes">Para preparar esta deliciosa pizza necesitarás:</p>
+                    <ul id="lista-ingredientes" class="lista-ingredientes">
+                        <li>250 g de harina</li>
+                        <li>150 ml de agua</li>
+                        <li>25 g de levadura fresca</li>
+                        <li>200 g de salsa de tomate</li>
+                        <li>200 g de queso mozzarella</li>
+                        <li>Hojas frescas de albahaca</li>
+                        <li>1 cucharada de aceite de oliva</li>
+                        <li>Sal al gusto</li>
+                    </ul>
+                </article>
+                <article>
+                    <h2 id="titulo-instrucciones">Instrucciones</h2>
+                    <p id="descripcion-instrucciones">Sigue estos pasos para preparar tu pizza:</p>
+                    <ol id="lista-instrucciones" class="lista-instrucciones">
+                        <li>Precalienta el horno a 220°C.</li>
+                        <li>Disuelve la levadura en agua tibia.</li>
+                        <li>Mezcla la harina con la levadura, el agua y una pizca de sal. Amasa hasta obtener una masa homogénea.</li>
+                        <li>Deja reposar la masa durante 1 hora.</li>
+                        <li>Extiende la masa sobre una superficie enharinada.</li>
+                        <li>Agrega la salsa de tomate, el queso mozzarella y las hojas de albahaca.</li>
+                        <li>Hornea durante 10-15 minutos hasta que esté dorada.</li>
+                    </ol>
+                    <button id="imprimir-receta" class="boton">Imprimir receta</button>
+                </article>
+            </div>
+            <div class="decoracion-derecha">
+                <img src="pizza.jpg" alt="Decoración derecha">
+            </div>
+        </div>
+    </section>
+
+    <section class="curiosidad-section">
+        <h2 id="titulo-curiosidades">Curiosidades sobre la Pizza Margherita</h2>
+        <button id="boton-curiosidad" class="boton">Saber más</button>
+        <div id="curiosidad" class="oculto ventana-curiosidad">
+            <p id="texto-curiosidad">La pizza Margherita fue creada en honor a la Reina Margarita de Saboya en 1889. Sus colores representan la bandera italiana: rojo (salsa), blanco (queso) y verde (albahaca).</p>
+            <button id="cerrar-curiosidad" class="boton">Cerrar</button>
+        </div>
+    </section>
+
+    <div class="compartir-redes">
+        <button id="compartir-facebook" class="boton">Compartir en Facebook</button>
+        <button id="compartir-twitter" class="boton">Compartir en Twitter</button>
+    </div>
+
+    <div id="modal-video" class="modal">
+        <div class="modal-contenido">
+            <span id="cerrar-modal" class="cerrar">&times;</span>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/abc123" frameborder="0" allowfullscreen></iframe>
+        </div>
+    </div>
+
+    <button id="volver-arriba" class="boton-flotante">⬆</button>
+
+    <footer>
+        <p>© 2025 Recetas Caseras. Todos los derechos reservados.</p>
+        <div class="social-icons">
+            <a href="https://facebook.com" target="_blank">Facebook</a> |
+            <a href="https://twitter.com" target="_blank">Twitter</a> |
+            <a href="https://instagram.com" target="_blank">Instagram</a>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
